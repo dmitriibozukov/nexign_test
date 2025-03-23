@@ -33,14 +33,14 @@ pip install webdriver-manager
 
 Тест начнет выполняться, и вы увидите вывод в консоли PyCharm.
 
-Результаты 1 задания  
+Результаты 1 задания: test_nexign
 
 ![Screenshot_3](https://github.com/user-attachments/assets/89992bd4-d1c9-470d-b58e-f5ab134a22b6)
 
-Результаты 2 задания 
+Результаты 2 задания: test_count_nexign_mentions
 ![Screenshot_2](https://github.com/user-attachments/assets/590ebc7c-5f28-4b65-a13a-3dd0ae010cea)
 
-Результаты 3 задания
+Результаты 3 задания: test_spelling_check
 
 (Для третьего задания были выбраны pymorphy2 и SpellChecker. Они не включают орфографию всех слов. Поэтому были добавлены исключения в виде сокращений, названий, аббревиатур, которые встречаются чаще всего и широко известны. Остались термины, которые по моему мнению должны пройти ручную проверку)
 
