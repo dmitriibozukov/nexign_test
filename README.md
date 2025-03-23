@@ -1,4 +1,3 @@
-# nexign_test
 
 # Проект: Автоматизация тестирования веб-страницы Nexign
 
@@ -16,12 +15,6 @@ pip install pymorphy2
 pip install pyspellchecker
 pip install webdriver-manager
 
-## Установка зависимостей
-nexign_test-main/
-├── test_nexign.py                  # Тест навигации по сайту
-├── test_count_nexign_mentions.py   # Тест подсчета упоминаний "Nexign"
-├── test_spelling_check.py          # Тест проверки орфографии
-└── README.md                       # Документация
 
 ## Запуск тестов
 Запуск через PyCharm
