@@ -24,7 +24,8 @@ pip install webdriver-manager
 
 Тест начнет выполняться, и вы увидите вывод в консоли PyCharm.
 
-Результаты 1 задания
+Результаты 1 задания  
+
 ![Screenshot_3](https://github.com/user-attachments/assets/89992bd4-d1c9-470d-b58e-f5ab134a22b6)
 
 Результаты 2 задания 
