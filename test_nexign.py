@@ -9,37 +9,32 @@ import pytest
 @pytest.fixture(scope="module")
 def driver():
     driver = webdriver.Chrome()
+    driver.maximize_window()  # Открыть браузер на весь экран
     yield driver
     driver.quit()
 
 def test_nexign(driver):
     try:
         driver.get("https://nexign.com/ru")
-        time.sleep(2)  # Даем странице время для загрузки
+        time.sleep(2)
 
-        # Ожидание появления элемента "Продукты и решения"
         wait = WebDriverWait(driver, 10)
         products_section = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'Продукты и решения')]")))
 
-        # Наведение курсора на элемент
         ActionChains(driver).move_to_element(products_section).perform()
-        time.sleep(1)  # Даем время для раскрытия меню
+        time.sleep(1)
 
-        # Клик на элемент "Продукты и решения"
         products_section.click()
         time.sleep(2)
 
-        # Шаг 3: Перейти в раздел «Инструменты для ИТ-команд»
         it_tools_section = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'Инструменты для ИТ-команд')]")))
         it_tools_section.click()
         time.sleep(2)
 
-        # Шаг 4: Перейти в раздел "Nexign Nord"
         nexign_nord_section = wait.until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(), 'Nexign Nord')]")))
         nexign_nord_section.click()
         time.sleep(2)
 
-        # Подтверждение успешного выполнения теста
         print("Тест успешно пройден: все шаги выполнены.")
 
     except Exception as e:
